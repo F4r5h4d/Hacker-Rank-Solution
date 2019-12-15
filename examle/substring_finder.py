@@ -1,5 +1,8 @@
+from itertools import combinations
+
+
 def sub_string_finder(string):
-    substring_of = [string.upper()[i: j] for i in range(len(string)) for j in range(i + 1, len(string) + 1)]
+    substring_of = [string.upper()[i:j] for i, j in combinations(range(len(string) + 1), r=2)]
     return substring_of
 
 
